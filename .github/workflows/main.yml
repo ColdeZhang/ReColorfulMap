@@ -35,7 +35,7 @@ jobs:
       - name: "Build & test"
         run: |
           TAG=$(echo $GITHUB_REF | sed 's/refs\/tags\///')
-          echo "done!"
+          echo "Tag: $TAG"
       - name: "GitHub Release"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:

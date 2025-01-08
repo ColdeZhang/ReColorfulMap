@@ -25,6 +25,7 @@ jobs:
           cache: gradle
       - name: "Build with Gradle"
         run: |
+          chmod +x gradlew
           ./gradlew clean
           ./gradlew shadowJar
       - name: "Stage"

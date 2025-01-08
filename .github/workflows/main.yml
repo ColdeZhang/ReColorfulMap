@@ -33,14 +33,16 @@ jobs:
         run: |
           mkdir -p staging
           mv build/libs/*.jar staging/
-      - name: "Build & test"
+      - name: "Extract Tag"
+        id: tag
         run: |
           TAG=$(echo $GITHUB_REF | sed 's/refs\/tags\///')
-          echo "done!"
+          echo "TAG=$TAG" >> $GITHUB_ENV
       - name: "GitHub Release"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "${{ env.TAG }}"
           prerelease: false
           files: |
             staging/*.jar

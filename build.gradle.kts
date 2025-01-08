@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cn.lunadeer"
-version = "3.0-rc.1"
+version = "3.0-rc.2"
 
 repositories {
     mavenCentral()

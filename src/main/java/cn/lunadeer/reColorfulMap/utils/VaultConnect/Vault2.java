@@ -1,0 +1,50 @@
+package cn.lunadeer.reColorfulMap.utils.VaultConnect;
+
+import cn.lunadeer.reColorfulMap.utils.XLogger;
+import net.milkbowl.vault2.economy.Economy;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.RegisteredServiceProvider;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import java.math.BigDecimal;
+
+public class Vault2 implements VaultInterface {
+
+    private Economy econ = null;
+
+    @Override
+    public boolean init(JavaPlugin plugin) {
+        RegisteredServiceProvider<Economy> rsp = plugin.getServer().getServicesManager().getRegistration(Economy.class);
+        if (rsp != null) {
+            econ = rsp.getProvider();
+            return true;
+        }
+        XLogger.err("VaultUnlocked Unable to find an economy plugin");
+        return false;
+    }
+
+    @Override
+    public String currencyNamePlural() {
+        return econ.defaultCurrencyNamePlural("ReColorfulMap");
+    }
+
+    @Override
+    public String currencyNameSingular() {
+        return econ.defaultCurrencyNameSingular("ReColorfulMap");
+    }
+
+    @Override
+    public void withdrawPlayer(Player player, double amount) {
+        econ.withdraw("ReColorfulMap", player.getUniqueId(), BigDecimal.valueOf(amount));
+    }
+
+    @Override
+    public void depositPlayer(Player player, double amount) {
+        econ.deposit("ReColorfulMap", player.getUniqueId(), BigDecimal.valueOf(amount));
+    }
+
+    @Override
+    public double getBalance(Player player) {
+        return econ.getBalance("ReColorfulMap", player.getUniqueId()).doubleValue();
+    }
+}

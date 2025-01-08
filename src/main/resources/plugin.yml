@@ -1,0 +1,20 @@
+name: ReColorfulMap
+version: '@version@'
+main: cn.lunadeer.reColorfulMap.ReColorfulMap
+api-version: '1.20'
+load: STARTUP
+folia-supported: true
+commands:
+  tomap:
+    description: Convert image to map
+    usage: /tomap <image url> [scale(default 1)]
+    permission: colorfulmap.tomap
+  reloadColorfulMap:
+    description: Reload ReColorfulMap configuration
+    usage: /reloadColorfulMap
+    permission: colorfulmap.reload
+permissions:
+  colorfulmap.tomap:
+    default: true
+  colorfulmap.reload:
+    default: op

@@ -1,0 +1,27 @@
+re-colorful-map-text:
+  fail-to-load-config: 'Failed to load configuration file: %s'
+  fail-to-load-language: 'Failed to load language file: %s, using default language.'
+  loading: ReColorfulMap is loading...
+  loaded: ReColorfulMap is loaded successfully!
+image-renderer:
+  fail-to-render: 'Failed to render image: %s'
+  image-too-large: image (%d x %d) is too large.
+image-map-item:
+  image-corrupt: Image corrupted, cannot load. Please regenerate.
+  url-not-allowed: This image URL (%s) is not allowed
+  read-image-failed: Failed to read image, please check if the image URL is correct or change the image host
+  image-size-not-allowed: Image too large, resolution must not exceed %dx%d
+  matrix-generate-failed: Failed to generate image matrix
+to-map-command:
+  usage: Usage /tomap <image-url> [scale (optional, default 1)]
+  scale-must-be-number: Scale must be a number.
+  generating-map: Generating map...
+  generated-map: 'Generated map, frame size: %d x %d'
+  generate-map-failed: 'Failed to generate map: %s'
+  player-only: Only players can use this command.
+image-map-event:
+  not-supported-direction: Don't support place image map in up or down direction
+  incomplete-item-frame-array: Incomplete item frame array need (%d x %d)
+  hook-economy-failed: Failed to hook economy plugin.
+  balance-not-enough: Not enough balance to place image map.
+  price-info: 'Matrix size: %d x %d, unit price: %f, total price: %f, your balance: %f'

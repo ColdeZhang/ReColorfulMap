@@ -1,0 +1,27 @@
+re-colorful-map-text:
+  fail-to-load-config: 加载配置文件失败：%s
+  fail-to-load-language: 加载语言文件失败：%s，使用默认语言。
+  loading: 正在加载 ReColorfulMap...
+  loaded: ReColorfulMap 加载成功！
+image-renderer:
+  fail-to-render: 渲染图片失败：%s
+  image-too-large: 图片分辨率 (%d x %d) 太大。
+image-map-item:
+  image-corrupt: 图片损坏，无法加载地图画，请重新生成。
+  url-not-allowed: 此图片链接 (%s) 不被允许。
+  read-image-failed: 获取图片失败，请检查图片链接是否正确或更换图床。
+  image-size-not-allowed: 图片分辨率过大，分辨率不得超过 %dx%d。
+  matrix-generate-failed: 切图失败。
+to-map-command:
+  usage: 用法 /tomap <图片URL> [缩放比例 (可选, 默认 1)]
+  scale-must-be-number: 缩放比例必须为数字。
+  generating-map: 正在生成地图画...
+  generated-map: 成功生成地图画，画框大小：%d x %d
+  generate-map-failed: 生成地图画失败：%s
+  player-only: 仅玩家可使用此命令。
+image-map-event:
+  not-supported-direction: 不支持在上下方向放置地图画。
+  incomplete-item-frame-array: 不完整的物品展示框矩阵，此地图画需要 %d x %d。
+  hook-economy-failed: 获取经济插件失败。
+  balance-not-enough: 余额不足以放置地图画。
+  price-info: 地图画尺寸：%d x %d, 单价：%f, 共计需要花费：%f, 你的余额：%f。

@@ -1,19 +1,9 @@
 package cn.lunadeer.reColorfulMap.utils;
 
-import cn.lunadeer.reColorfulMap.ImageRenderer;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.MapMeta;
-import org.bukkit.map.MapView;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.List;
 
 public class Common {
 

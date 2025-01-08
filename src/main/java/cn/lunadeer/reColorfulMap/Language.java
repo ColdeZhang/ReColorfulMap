@@ -13,9 +13,13 @@ import java.util.List;
 public class Language extends ConfigurationFile {
 
     public static ReColorfulMap.ReColorfulMapText reColorfulMapText = new ReColorfulMap.ReColorfulMapText();
+
     public static ImageRenderer.ImageRendererText imageRenderer = new ImageRenderer.ImageRendererText();
+
     public static ImageMapItem.ImageMapItemText imageMapItem = new ImageMapItem.ImageMapItemText();
+
     public static ToMap.ToMapCommandText toMapCommand = new ToMap.ToMapCommandText();
+
     public static ImageMapEvent.ImageMapEventText imageMapEvent = new ImageMapEvent.ImageMapEventText();
 
     public static void load(CommandSender sender) {
@@ -25,6 +29,9 @@ public class Language extends ConfigurationFile {
                     "languages/zh_cn.yml"
             );
             for (String language : languages) {
+                if (new File(ReColorfulMap.getInstance().getDataFolder(), language).exists()) {
+                    continue;
+                }
                 ReColorfulMap.getInstance().saveResource(language, false);
             }
             File languageFile = new File(ReColorfulMap.getInstance().getDataFolder(), "languages/" + Configuration.language + ".yml");

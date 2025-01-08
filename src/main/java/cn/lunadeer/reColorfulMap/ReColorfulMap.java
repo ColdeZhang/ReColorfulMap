@@ -30,6 +30,16 @@ public final class ReColorfulMap extends JavaPlugin {
         XLogger.setDebug(Configuration.debug);
         XLogger.info(Language.reColorfulMapText.loading);
 
+        // https://patorjk.com/software/taag/#p=display&f=Big&t=reColorfulMap
+        XLogger.info("            _____      _             __       _ __  __");
+        XLogger.info("           / ____|    | |           / _|     | |  \\/  |");
+        XLogger.info("  _ __ ___| |     ___ | | ___  _ __| |_ _   _| | \\  / | __ _ _ __");
+        XLogger.info(" | '__/ _ \\ |    / _ \\| |/ _ \\| '__|  _| | | | | |\\/| |/ _` | '_ \\");
+        XLogger.info(" | | |  __/ |___| (_) | | (_) | |  | | | |_| | | |  | | (_| | |_) |");
+        XLogger.info(" |_|  \\___|\\_____/\\___/|_|\\___/|_|  |_|  \\__,_|_|_|  |_|\\__,_| .__/");
+        XLogger.info("                                                            | |");
+        XLogger.info("                                                            |_|");
+
         Objects.requireNonNull(getCommand("tomap")).setExecutor(new ToMap());
 
         getServer().getPluginManager().registerEvents(new ImageMapEvent(), this);

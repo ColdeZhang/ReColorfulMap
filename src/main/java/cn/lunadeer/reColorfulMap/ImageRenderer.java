@@ -4,7 +4,6 @@ import cn.lunadeer.reColorfulMap.utils.ImageUtils;
 import cn.lunadeer.reColorfulMap.utils.Notification;
 import cn.lunadeer.reColorfulMap.utils.configuration.ConfigurationPart;
 import org.bukkit.entity.Player;
-
 import org.bukkit.inventory.meta.MapMeta;
 import org.bukkit.map.MapCanvas;
 import org.bukkit.map.MapRenderer;

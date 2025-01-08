@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   build:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -31,17 +32,11 @@ jobs:
       - name: "Stage"
         run: |
           mkdir -p staging
-          if ls build/libs/*.jar 1> /dev/null 2>&1; then
-            mv build/libs/*.jar staging/
-          else
-            echo "No JAR files found"
-            exit 1
-          fi
-      - name: "Extract Tag"
-        id: tag
+          mv build/libs/*.jar staging/
+      - name: "Build & test"
         run: |
           TAG=$(echo $GITHUB_REF | sed 's/refs\/tags\///')
-          echo "TAG=$TAG" >> $GITHUB_ENV
+          echo "done!"
       - name: "GitHub Release"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:

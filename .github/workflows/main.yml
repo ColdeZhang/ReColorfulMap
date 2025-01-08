@@ -3,7 +3,7 @@ name: Java CI-CD with Gradle
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
 
 permissions:
   contents: read

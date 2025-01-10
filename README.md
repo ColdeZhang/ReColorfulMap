@@ -92,7 +92,7 @@ version: 2
 max-frame-x: 32
 max-frame-y: 18
 # Language of the plugin, see others in the plugins/FurnitureCore/languages folder.
-language: ch
+language: en_us
 # Enable economy system. (Require Vault and an economy plugin)
 # If true, players need to pay for each map they create.
 # This may prevent players from abusing usage of the plugin.

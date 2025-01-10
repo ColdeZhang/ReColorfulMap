@@ -1,7 +1,6 @@
 package cn.lunadeer.reColorfulMap.commands;
 
 import cn.lunadeer.reColorfulMap.ImageMapItem;
-import cn.lunadeer.reColorfulMap.utils.configuration.ConfigurationPart;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;

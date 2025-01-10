@@ -10,7 +10,6 @@
 
 [![Hangar](https://img.shields.io/badge/To-Hangar-004ee9)](https://hangar.papermc.io/zhangyuheng/ReColorfulMap)
 [![Modrinth](https://img.shields.io/badge/To-Modrinth-1bd96a)](https://modrinth.com/project/recolorfulmap)
-[![Spigot](https://img.shields.io/badge/To-Spigot-ed8106)]()
 
 </div>
 

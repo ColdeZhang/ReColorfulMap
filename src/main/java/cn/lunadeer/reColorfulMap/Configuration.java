@@ -1,10 +1,8 @@
 package cn.lunadeer.reColorfulMap;
 
 import cn.lunadeer.reColorfulMap.utils.Notification;
-import cn.lunadeer.reColorfulMap.utils.configuration.Comments;
-import cn.lunadeer.reColorfulMap.utils.configuration.ConfigurationFile;
-import cn.lunadeer.reColorfulMap.utils.configuration.ConfigurationManager;
-import cn.lunadeer.reColorfulMap.utils.configuration.ConfigurationPart;
+import cn.lunadeer.reColorfulMap.utils.VaultConnect.VaultConnect;
+import cn.lunadeer.reColorfulMap.utils.configuration.*;
 import org.bukkit.command.CommandSender;
 
 import java.io.File;
@@ -45,6 +43,13 @@ public class Configuration extends ConfigurationFile {
 
     @Comments("Debug mode, if report bugs turn this on.")
     public static boolean debug = false;
+
+    @PostProcess
+    public static void hookVault() {
+        if (economy.enable) {
+            new VaultConnect(ReColorfulMap.getInstance());
+        }
+    }
 
     /**
      * Load the configuration file and language file.

@@ -46,6 +46,24 @@ jobs:
           prerelease: false
           files: |
             staging/*.jar
+      - name: "Modrinth Release"
+        uses: dsx137/modrinth-release-action@main
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          RELEASE_TAG: ${{ env.TAG }}
+        with:
+          name: ${{ env.RELEASE_TAG }}
+          project_id: OSGNJlhi
+          loaders: bukkit,folia,paper,purpur,spigot
+          game_versions: 1.20.1:1.20.6,1.21,1.21.1
+          version_number: ${{ env.RELEASE_TAG }}
+          files: |
+            staging/*.jar
+          changelog: "See https://github.com/ColdeZhang/Dominion/releases/tag/${{ env.RELEASE_TAG }}"
+          version_type: release
+          featured: false
+          updatable: false
+          delete_old_files: false
       - name: "Hangar Release"
         env:
           HANGAR_TOKEN: ${{ secrets.HANGAR_API_TOKEN }}

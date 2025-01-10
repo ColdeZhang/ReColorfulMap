@@ -8,6 +8,10 @@
 [![bStats](https://img.shields.io/badge/bStats-Statistics-eacd76?logo=google-analytics)](https://bstats.org/plugin/bukkit/ColorfulMap/21443)
 [![Latest Build](https://img.shields.io/github/v/release/ColdeZhang/ReColorfulMap?label=LatestBuild&logo=github&color=0aa344)](https://github.com/ColdeZhang/ReColorfulMap/releases/latest)
 
+[![Hangar](https://img.shields.io/badge/To-Hangar-004ee9)](https://hangar.papermc.io/zhangyuheng/ReColorfulMap)
+[![Modrinth](https://img.shields.io/badge/To-Modrinth-1bd96a)](https://modrinth.com/project/recolorfulmap)
+[![Spigot](https://img.shields.io/badge/To-Spigot-ed8106)]()
+
 </div>
 
 ## Description
@@ -115,7 +119,7 @@ GitHub: [Issues](https://github.com/ColdeZhang/ReColorfulMap/issues)
 
 QQ群：309428300
 
-## 统计
+## bStats
 
 ![bstats](https://bstats.org/signatures/bukkit/ColorfulMap.svg)
 

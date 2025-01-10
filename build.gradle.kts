@@ -1,10 +1,13 @@
+import io.papermc.hangarpublishplugin.model.Platforms
+
 plugins {
     id("java")
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("io.papermc.hangar-publish-plugin") version "0.1.2"
 }
 
 group = "cn.lunadeer"
-version = "3.0-rc.2"
+version = "3.1-rc.0"
 
 repositories {
     mavenCentral()
@@ -43,4 +46,26 @@ tasks.shadowJar {
     archiveClassifier.set("")
     archiveVersion.set(project.version.toString())
     dependsOn(tasks.withType<ProcessResources>())
+}
+
+hangarPublish {
+    publications.register("plugin") {
+        version.set(project.version as String) // use project version as publication version
+        id.set("ReColorfulMap")
+        channel.set("Release")
+        changelog.set("See https://github.com/ColdeZhang/ReColorfulMap/releases/tag/v${project.version}")
+        apiKey.set(System.getenv("HANGAR_TOKEN"))
+        // register platforms
+        platforms {
+            register(Platforms.PAPER) {
+                jar.set(tasks.shadowJar.flatMap { it.archiveFile })
+                kotlin.io.println("ShadowJar: ${tasks.shadowJar.flatMap { it.archiveFile }}")
+                platformVersions.set(kotlin.collections.listOf("1.20.1-1.20.6", "1.21.x"))
+            }
+        }
+    }
+}
+
+tasks.named("publishPluginPublicationToHangar") {
+    dependsOn(tasks.named("jar"))
 }

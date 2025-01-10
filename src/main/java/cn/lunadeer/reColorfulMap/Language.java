@@ -1,5 +1,6 @@
 package cn.lunadeer.reColorfulMap;
 
+import cn.lunadeer.reColorfulMap.commands.Reload;
 import cn.lunadeer.reColorfulMap.commands.ToMap;
 import cn.lunadeer.reColorfulMap.events.ImageMapEvent;
 import cn.lunadeer.reColorfulMap.utils.Notification;
@@ -21,6 +22,8 @@ public class Language extends ConfigurationFile {
     public static ToMap.ToMapCommandText toMapCommand = new ToMap.ToMapCommandText();
 
     public static ImageMapEvent.ImageMapEventText imageMapEvent = new ImageMapEvent.ImageMapEventText();
+
+    public static Reload.ReloadCommandText reloadCommand = new Reload.ReloadCommandText();
 
     public static void load(CommandSender sender) {
         try {

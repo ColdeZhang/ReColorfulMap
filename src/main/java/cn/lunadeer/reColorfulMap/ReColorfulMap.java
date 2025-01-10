@@ -1,11 +1,14 @@
 package cn.lunadeer.reColorfulMap;
 
+import cn.lunadeer.reColorfulMap.commands.Clean;
+import cn.lunadeer.reColorfulMap.commands.Reload;
 import cn.lunadeer.reColorfulMap.commands.ToMap;
 import cn.lunadeer.reColorfulMap.events.ImageMapEvent;
 import cn.lunadeer.reColorfulMap.events.MapInitEvent;
 import cn.lunadeer.reColorfulMap.utils.Notification;
 import cn.lunadeer.reColorfulMap.utils.Scheduler;
 import cn.lunadeer.reColorfulMap.utils.XLogger;
+import cn.lunadeer.reColorfulMap.utils.bStatsMetrics;
 import cn.lunadeer.reColorfulMap.utils.configuration.ConfigurationPart;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -40,7 +43,11 @@ public final class ReColorfulMap extends JavaPlugin {
         XLogger.info("                                                            | |");
         XLogger.info("                                                            |_|");
 
+        new bStatsMetrics(this, 21443);
+
         Objects.requireNonNull(getCommand("tomap")).setExecutor(new ToMap());
+        Objects.requireNonNull(getCommand("reloadColorfulMap")).setExecutor(new Reload());
+        Objects.requireNonNull(getCommand("cleanColorfulMap")).setExecutor(new Clean());
 
         getServer().getPluginManager().registerEvents(new ImageMapEvent(), this);
         getServer().getPluginManager().registerEvents(new MapInitEvent(), this);

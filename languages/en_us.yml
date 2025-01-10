@@ -12,6 +12,7 @@ image-map-item:
   read-image-failed: Failed to read image, please check if the image URL is correct or change the image host
   image-size-not-allowed: Image too large, resolution must not exceed %dx%d
   matrix-generate-failed: Failed to generate image matrix
+  removed-image-tiles: Removed %d unused image tiles.
 to-map-command:
   usage: Usage /tomap <image-url> [scale (optional, default 1)]
   scale-must-be-number: Scale must be a number.
@@ -25,3 +26,6 @@ image-map-event:
   hook-economy-failed: Failed to hook economy plugin.
   balance-not-enough: Not enough balance to place image map.
   price-info: 'Matrix size: %d x %d, unit price: %f, total price: %f, your balance: %f'
+reload-command:
+  reloading-config: Reloading configuration file...
+  reload-config-success: Configuration file reloaded successfully!

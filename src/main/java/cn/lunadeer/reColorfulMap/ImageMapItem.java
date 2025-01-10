@@ -33,6 +33,7 @@ public class ImageMapItem extends ItemStack {
         public String readImageFailed = "Failed to read image, please check if the image URL is correct or change the image host";
         public String imageSizeNotAllowed = "Image too large, resolution must not exceed %dx%d";
         public String matrixGenerateFailed = "Failed to generate image matrix";
+        public String removedImageTiles = "Removed %d unused image tiles.";
     }
 
     private final Integer x_count;
@@ -280,7 +281,7 @@ public class ImageMapItem extends ItemStack {
                 }
             });
         });
-        Notification.info(sender, "Removed %d image tiles.".formatted(count.get()));
+        Notification.info(sender, Language.imageMapItem.removedImageTiles.formatted(count.get()));
     }
 
 }

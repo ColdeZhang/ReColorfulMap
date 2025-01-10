@@ -8,13 +8,17 @@ commands:
   tomap:
     description: Convert image to map
     usage: /tomap <image url> [scale(default 1)]
-    permission: colorfulmap.tomap
+    permission: recolorfulmap.tomap
   reloadColorfulMap:
     description: Reload ReColorfulMap configuration
     usage: /reloadColorfulMap
-    permission: colorfulmap.reload
+    permission: recolorfulmap.admin
+  cleanColorfulMap:
+    description: Clean invalid maps data
+    usage: /cleanColorfulMap
+    permission: recolorfulmap.admin
 permissions:
-  colorfulmap.tomap:
+  recolorfulmap.tomap:
     default: true
-  colorfulmap.reload:
+  recolorfulmap.admin:
     default: op

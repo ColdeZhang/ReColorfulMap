@@ -46,3 +46,7 @@ jobs:
           prerelease: false
           files: |
             staging/*.jar
+      - name: "Hangar Release"
+        env:
+          HANGAR_TOKEN: ${{ secrets.HANGAR_API_TOKEN }}
+        run: ./gradlew build publishPluginPublicationToHangar
